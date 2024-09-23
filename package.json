@@ -1,7 +1,7 @@
 {
-  "name": "VDON.Electron.Capture.App",
+  "name": "VDON.ElectronCaptureOne.App",
   "version": "2.18.4",
-  "description": "A simple tool to aid with frameless window video capture and VDON publishing",
+  "description": "ElectronCaptureOne background service",
   "author": "Steve Seguin <steve@seguin.email>",
   "main": "main.js",
   "scripts": {
@@ -20,9 +20,11 @@
   },
   "build": {
     "appId": "capture.electron",
-    "productName": "ElectronCapture",
+    "productName": "ElectronCaptureOne",
     "files": [
       "**/*",
+      "!tmp/*",
+      "!output/*",
       "build/Release/*",
       "assets/icons/*.*",
       "assets/icons/mac/*.*",
@@ -56,7 +58,7 @@
           "path": "/Applications"
         }
       ],
-      "artifactName": "elecap-${version}.${ext}",
+      "artifactName": "ElectronCaptureOne-${version}.${ext}",
       "writeUpdateInfo": false
     },
     "win": {
@@ -87,20 +89,20 @@
     "nsis": {
       "runAfterFinish": true,
       "installerIcon": "assets/icons/win/icon.ico",
-      "artifactName": "elecap-${version}.${ext}",
+      "artifactName": "ElectronCaptureOne-${version}.${ext}",
       "differentialPackage": false
     },
     "portable": {
-      "artifactName": "elecap.exe",
+      "artifactName": "ElectronCaptureOne.exe",
       "requestExecutionLevel": "user",
       "unpackDirName": true
     },
     "appx": {
-      "applicationId": "elecap",
+      "applicationId": "ElectronCaptureOne",
       "backgroundColor": "#464646",
-      "identityName": "elecap",
+      "identityName": "ElectronCaptureOne",
       "publisherDisplayName": "Steve Seguin",
-      "artifactName": "elecap-${version}.${ext}"
+      "artifactName": "ElectronCaptureOne-${version}.${ext}"
     },
     "publish": [
       {

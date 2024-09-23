@@ -324,13 +324,13 @@ async function createWindow(args, reuse=false){
 		URL = "https://vdo.ninja/electron?version="+ver;
 	}
 
-	let currentTitle = "ElectronCapture";
+	let currentTitle = "ElectronCaptureOne";
 	
 	if (reuse){
 		currentTitle = reuse;
 	} else if (TITLE===null){
 		counter+=1;
-		currentTitle = "Electron "+(counter.toString());
+		currentTitle = "ElectronCaptureOne Elec"+(counter.toString());
 	} else if (counter==0){
 		counter+=1;
 		currentTitle = TITLE.toString();
