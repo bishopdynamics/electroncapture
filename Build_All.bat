@@ -1,7 +1,7 @@
 @ECHO off
 @REM Build 10 unique instances
 
-set NUM=3
+set NUM=10
 
 echo Building %NUM% instances
 
